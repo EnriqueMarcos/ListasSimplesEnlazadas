@@ -16,7 +16,7 @@ public class MetodosLista<T> implements LinkedList<T>{
 			while (actual.siguiente != null) {
 				actual = actual.siguiente;
 			}
-			actual.siguiente =new Nodo<T>(elemento);
+			actual.siguiente = new Nodo<T>(elemento);
 		}	
 		
 	}
@@ -64,7 +64,16 @@ public class MetodosLista<T> implements LinkedList<T>{
 	}
 	@Override
 	public String toString() {
-		
+		StringBuilder sb = new StringBuilder();
+		  sb.append("head\n");
+		  sb.append("-\n");
+		  sb.append("[");
+		  while (actual.siguiente != null) {
+				 sb.append(actual.siguiente);
+			}
+		  sb.append(", ");
+		  sb.append("]");
+		  return sb.toString();
 		}
 
 	@Override
