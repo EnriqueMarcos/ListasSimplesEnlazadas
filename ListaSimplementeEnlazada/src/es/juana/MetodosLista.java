@@ -5,7 +5,7 @@ public class MetodosLista<T> implements LinkedList<T>{
 	private Nodo<T> inicial;
 	public MetodosLista() {
 	}
-	 Nodo<T> actual = new Nodo<T>(elemento);
+	
 	@Override
 	public void add(T elemento) {
 		if (inicial == null) {
@@ -53,7 +53,7 @@ public class MetodosLista<T> implements LinkedList<T>{
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
