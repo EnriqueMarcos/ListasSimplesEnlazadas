@@ -39,6 +39,7 @@ public class MetodosLista<T> implements LinkedList<T>{
 		}else {
 			Nodo<T> actual = inicial;
 			while (actual.siguiente != null) {
+				actual = actual.siguiente;
 				if (actual == elemento) {
 					actual = null;
 				}
@@ -65,6 +66,7 @@ public class MetodosLista<T> implements LinkedList<T>{
 		}else {
 			Nodo<T> actual = inicial;
 			while (actual.siguiente != null) {
+				actual = actual.siguiente;
 				contador++;
 			}
 		}
@@ -77,6 +79,7 @@ public class MetodosLista<T> implements LinkedList<T>{
 		}else {
 			Nodo<T> actual = inicial;
 			while (actual.siguiente != null) {
+				actual = actual.siguiente;
 				actual = null;
 			}
 		}	
