@@ -5,12 +5,12 @@ public class MetodosLista<T> implements LinkedList<T>{
 	private Nodo<T> inicial;
 	public MetodosLista() {
 	}
-	
+
 	@Override
 	public void add(T elemento) {
 		if (inicial == null) {
-			 Nodo<T> inicial1 = new Nodo<T>(elemento);
-			 inicial = inicial1;
+			Nodo<T> inicial1 = new Nodo<T>(elemento);
+			inicial = inicial1;
 		}else {
 			Nodo<T> actual = inicial;
 			while (actual.siguiente != null) {
@@ -18,19 +18,52 @@ public class MetodosLista<T> implements LinkedList<T>{
 			}
 			actual.siguiente = new Nodo<T>(elemento);
 		}	
-		
+
 	}
 
 	@Override
 	public void add(T elemento, int index) {
-		// TODO Auto-generated method stub
-		
+		int contador = 0;
+		if (inicial == null) {
+
+		}else {
+			Nodo<T> actual = inicial;
+			while (actual.siguiente != null) {
+				actual = actual.siguiente;
+				contador++;
+				if (actual.siguiente == null) {
+					index = index -1;
+					if(contador == index) {
+						actual.siguiente = new Nodo<T>(elemento);
+					}
+					if(contador == index) {
+						actual.siguiente = new Nodo<T>(elemento);
+
+					}
+				}
+			}
+		}
+
 	}
 
 	@Override
 	public T remove(int index) {
-		// TODO Auto-generated method stub
+		int contador = 0;
+		if (inicial == null) {
+			return null;
+		}else {
+			Nodo<T> actual = inicial;
+			while (actual.siguiente != null) {
+				actual = actual.siguiente;
+				contador++;
+				if(contador == index) {
+					System.out.println(actual);
+					actual = null;
+				}
+			}
+		}
 		return null;
+
 	}
 
 	@Override
@@ -44,9 +77,9 @@ public class MetodosLista<T> implements LinkedList<T>{
 					actual = null;
 				}
 			}
-			
+
 		}	
-		
+
 	}
 
 	@Override
@@ -55,7 +88,7 @@ public class MetodosLista<T> implements LinkedList<T>{
 			return true;
 		}
 		return false;
-	
+
 	}
 
 	@Override
@@ -102,26 +135,33 @@ public class MetodosLista<T> implements LinkedList<T>{
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		  sb.append("head\n");
-		  sb.append("-\n");
-		  sb.append("[");
-		  while () {
-				 sb.append();
-			}
-		  sb.append(", ");
-		  sb.append("]");
-		  return sb.toString();
+		sb.append("head\n");
+		sb.append("-\n");
+		sb.append("[");
+		while () {
+			sb.append();
 		}
+		sb.append(", ");
+		sb.append("]");
+		return sb.toString();
+	}
 
 	@Override
 	public Object[] toArray() {
-		// TODO Auto-generated method stub
+		if (inicial == null) {
+		}else {
+			Nodo<T> actual = inicial;
+			while (actual.siguiente != null) {
+				actual = actual.siguiente;
+				System.out.println(actual);
+			}
+		}
 		return null;
 	}
 
-	
-	
-	
-	
-	
+
+
+
+
+
 }
