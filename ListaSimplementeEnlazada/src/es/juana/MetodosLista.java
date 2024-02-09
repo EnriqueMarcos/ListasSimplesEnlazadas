@@ -35,32 +35,66 @@ public class MetodosLista<T> implements LinkedList<T>{
 
 	@Override
 	public void remove(T elemento) {
-		// TODO Auto-generated method stub
+		if (inicial == null) {
+		}else {
+			Nodo<T> actual = inicial;
+			while (actual.siguiente != null) {
+				if (actual == elemento) {
+					actual = null;
+				}
+			}
+			
+		}	
 		
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
+		if (inicial == null) {
+			return true;
+		}
 		return false;
+	
 	}
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		int contador = 0;
+		if (inicial == null) {
+			return 0;
+		}else {
+			Nodo<T> actual = inicial;
+			while (actual.siguiente != null) {
+				contador++;
+			}
+		}
+		return contador;	
 	}
 
 	@Override
 	public void clear() {
-		
-		
+		if (inicial == null) {
+		}else {
+			Nodo<T> actual = inicial;
+			while (actual.siguiente != null) {
+				actual = null;
+			}
+		}	
 	}
 
 	@Override
 	public boolean contains(T elemento) {
-		// TODO Auto-generated method stub
-		return false;
+		if (inicial == null) {
+			return false;
+		}else {
+			Nodo<T> actual = inicial;
+			while (actual.siguiente != null) {
+				if (actual == elemento) {
+					return true;
+				}
+			}
+			return false;
+		}	
 	}
 	@Override
 	public String toString() {
@@ -68,8 +102,8 @@ public class MetodosLista<T> implements LinkedList<T>{
 		  sb.append("head\n");
 		  sb.append("-\n");
 		  sb.append("[");
-		  while (actual.siguiente != null) {
-				 sb.append(actual.siguiente);
+		  while () {
+				 sb.append();
 			}
 		  sb.append(", ");
 		  sb.append("]");

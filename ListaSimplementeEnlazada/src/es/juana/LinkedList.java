@@ -32,5 +32,7 @@ public interface LinkedList<T> {
     // Método para obtener un array con los elementos de la lista
     Object[] toArray();
     
+		
+	
 
 }
