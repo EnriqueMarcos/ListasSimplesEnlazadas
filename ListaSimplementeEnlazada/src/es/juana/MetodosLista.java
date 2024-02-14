@@ -132,7 +132,7 @@ public class MetodosLista<T> implements LinkedList<T>{
 			return false;
 		}	
 	}
-	@Override
+	/*@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("head\n");
@@ -144,7 +144,7 @@ public class MetodosLista<T> implements LinkedList<T>{
 		sb.append(", ");
 		sb.append("]");
 		return sb.toString();
-	}
+	}*/
 
 	@Override
 	public Object[] toArray() {
